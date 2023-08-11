@@ -1,8 +1,8 @@
 # cerberus-z80-forth
-FORTH for the Z80 CPU of the Cerberus 208
+FORTH for the Z80 CPU of the Cerberus 2080 and Cerberus 2100
 
 This FORTH system is designed to run on the Z80 CPU of the Cerberus 2080
-computer.
+and 2100 computers.
 
 A useful introduction to FORTH can be found here. 
 http://galileo.phys.virginia.edu/classes/551.jvn.fall01/primer.htm
@@ -19,6 +19,8 @@ The cerberus-z80-forth package  contains the following files.
 - squares.4th (a short example program).
 - primes.4th (a primes benchmark example).
 - testcode.4th (example for code definitions).
+- restit.4th a Tetris-like game.
+- serpent.4th a Snake-like game.
 - tester.4th and core.4th (a regression test suite). Note that this is
   by a different author and not covered by the GPLv3.
 - glosgen.4th and doglos.4th  Tools used to generate the glossary.txt file.
@@ -43,3 +45,6 @@ https://github.com/breakintoprogram/cerberus-bbc-basic/tree/main/cat
 
 You need to reprogram the CAT chip on your board with this version of BIOS
 if you want to run Cerberus 2080 FORTH.
+
+Cerberus 2100 has this version of BIOS as a standard, so you do not need
+to reprogram CAT on this machine.

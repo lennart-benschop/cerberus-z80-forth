@@ -8,7 +8,7 @@ Brad Rodriguez.
 1 Introduction
 
 This FORTH system is designed to run on the Z80 CPU of the Cerberus 2080
-computer.
+or 2100 computer.
 
 A useful introduction to FORTH can be found here. 
 http://galileo.phys.virginia.edu/classes/551.jvn.fall01/primer.htm
@@ -25,6 +25,8 @@ The cerberus-z80-forth package  contains the following files.
 - squares.4th (a short example program).
 - primes.4th (a primes benchmark example).
 - testcode.4th (example for code definitions).
+- restit.4th a Tetris-like game.
+- serpent.4th a Snake-like game.
 - tester.4th and core.4th (a regression test suite). Note that this is
   by a different author and not covered by the GPLv3.
 - glosgen.4th and doglos.4th  Tools used to generate the glossary.txt file.
@@ -50,6 +52,9 @@ https://github.com/breakintoprogram/cerberus-bbc-basic/tree/main/cat
 You need to reprogram the CAT chip on your board with this version of BIOS
 if you want to run Cerberus 2080 FORTH.
 
+Cerberus 2100 has this version of BIOS as a standard, so you do not need
+to reprogram CAT on this machine.
+
 2 Getting started
 
 2.1 Starting up.
@@ -72,8 +77,8 @@ Then type the command:
 run
 
 You should now see a message like this:
-Cerberus Z80 Forth, 2022-03-27 GPLv3
-(c) 2022 L.C. Benschop, Brad Rodriguez
+Cerberus Z80 Forth, 2023-08-11 GPLv3
+(c) 2023 L.C. Benschop, Brad Rodriguez
 
 You are now at the FORTH command prompt. You can type a FORTH command
 like this:
@@ -374,7 +379,8 @@ Plus the weird looking B--0=, which expands to DJNZ.
 HERE-PAD  word buffer, numeric conversion buffer
 PAD-PAD+80 temporary workspace
     -7FFF Free space
-8000-EFFF Source file buffer
+8000-EFFD Source file buffer
+EFFE-EFFF Mailbox for expansion slot (Cerberus 2100)
 F000-F7FF Character definitions
 F800-FCAF Video RAM
 FCB0-FD2F LINEBUF (line from file).
