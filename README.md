@@ -21,6 +21,7 @@ The cerberus-z80-forth package  contains the following files.
 - testcode.4th (example for code definitions).
 - restit.4th a Tetris-like game.
 - serpent.4th a Snake-like game.
+- spacer.4th a 2d space shooter game.
 - tester.4th and core.4th (a regression test suite). Note that this is
   by a different author and not covered by the GPLv3.
 - glosgen.4th and doglos.4th  Tools used to generate the glossary.txt file.
